@@ -6,13 +6,12 @@
 //
 
 import SwiftUI
-import MapKit
+import AVKit
 
 struct ContentView: View {
-    @State private var color = Color.white
     
     var body: some View {
-        ColorPicker("Pick a color", selection: $color)
+        VideoPlayer(player: AVPlayer(url: URL(string: "https://bit.ly/swswift")!))
     }
 }
 
@@ -21,3 +20,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+ 
