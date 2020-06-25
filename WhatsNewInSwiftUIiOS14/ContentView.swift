@@ -11,7 +11,12 @@ import AVKit
 struct ContentView: View {
     
     var body: some View {
-        VideoPlayer(player: AVPlayer(url: URL(string: "https://bit.ly/swswift")!))
+        VideoPlayer(player: AVPlayer(url: URL(string: "https://bit.ly/swswift")!)) {
+            Text("SwiftUI")
+                .font(.largeTitle)
+                .padding()
+                .background(Color.black.opacity(0.8))
+        }
     }
 }
 
