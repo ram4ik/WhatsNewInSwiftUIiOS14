@@ -11,11 +11,7 @@ struct ContentView: View {
     @State private var text = "Hello, SwiftUI"
     
     var body: some View {
-        TextEditor(text: $text)
-            .padding()
-            .lineLimit(5)
-            .foregroundColor(.blue)
-            .font(.headline)
+        ProgressView("Loading...")
     }
 }
 
