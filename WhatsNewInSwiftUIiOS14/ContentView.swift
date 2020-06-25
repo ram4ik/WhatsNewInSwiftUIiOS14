@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var text = "Hello, SwiftUI"
+    @State private var downloadAmount = 0.0
     
     var body: some View {
-        ProgressView("Loading...")
+        VStack {
+            ProgressView("Loading...", value: downloadAmount, total: 100)
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+            Button("Move along please") {
+                downloadAmount += 5
+            }
+        }
     }
 }
 
