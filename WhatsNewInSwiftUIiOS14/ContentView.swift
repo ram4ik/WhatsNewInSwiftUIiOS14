@@ -6,18 +6,13 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
-    @State private var downloadAmount = 0.0
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), latitudinalMeters: 0.5, longitudinalMeters: 0.5)
     
     var body: some View {
-        ScrollView {
-            VStack {
-                ForEach(0...1000, id: \.self) { i in
-                    Text("Row \(i)")
-                }
-            }
-        }
+        Map(coordinateRegion: $region)
     }
 }
 
