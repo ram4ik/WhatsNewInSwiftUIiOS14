@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var text = "Hello, SwiftUI"
+    
     var body: some View {
-        Text("What's new in SwiftUI iOS 14").padding()
+        TextEditor(text: $text)
+            .padding()
+            .lineLimit(5)
+            .foregroundColor(.blue)
+            .font(.headline)
     }
 }
 
